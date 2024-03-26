@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/80zQbmD/1.png",
+    "review": "A classic tale of love, wealth, and the American Dream. The story follows Jay Gatsby, a mysterious millionaire, as he pursues his lost love, Daisy Buchanan, amid the opulence and excess of the Jazz Age. With its vivid characters and evocative prose, The Great Gatsby is a timeless exploration of the elusive nature of the American Dream.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["Classic", "Romance", "Tragedy"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 2,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://i.ibb.co/yftWWhP/2.png",
+    "review": "A poignant story of racial injustice and moral growth. Set in the fictional town of Maycomb, Alabama, during the 1930s, To Kill a Mockingbird follows young Scout Finch as she navigates the complexities of race, class, and morality. Through the eyes of Scout and her father, lawyer Atticus Finch, the novel explores themes of compassion, empathy, and the search for truth.",
+    "totalPages": 324,
+    "rating": 4.7,
+    "category": "Fiction",
+    "tags": ["Social Justice", "Coming of Age"],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 3,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/N9p7VQn/3.png",
+    "review": "A dystopian novel exploring themes of totalitarianism and surveillance. In the totalitarian state of Oceania, protagonist Winston Smith grapples with the oppressive regime led by the Party and its leader, Big Brother. Through Winston's journey of resistance and rebellion, 1984 paints a chilling portrait of a society ruled by propaganda, surveillance, and thought control.",
+    "totalPages": 328,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": ["Dystopian", "Political Satire"],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 4,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/ck0Vvxm/4.png",
+    "review": "A coming-of-age novel featuring themes of alienation and identity. Narrated by troubled teenager Holden Caulfield, The Catcher in the Rye follows Holden's journey through New York City as he grapples with issues of adolescence, identity, and societal expectations. With its candid exploration of teenage angst and rebellion, the novel has become a classic of American literature.",
+    "totalPages": 224,
+    "rating": 4.0,
+    "category": "Fiction",
+    "tags": ["Coming of Age", "Cultural"],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 5,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://i.ibb.co/hDk1jR0/5.png",
+    "review": "A classic romance novel set in early 19th-century England. Pride and Prejudice follows the story of Elizabeth Bennet, a spirited and independent young woman, as she navigates the social hierarchy of Regency-era England. Along the way, Elizabeth encounters the enigmatic Mr. Darcy, sparking a series of misunderstandings, misjudgments, and ultimately, a journey toward love and self-discovery.",
+    "totalPages": 279,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": ["Romance", "Social Commentary"],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  },
+  {
+    "bookId": 6,
+    "bookName": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.ibb.co/vHmG6qJ/6.png",
+    "review": "An epic fantasy adventure following Bilbo Baggins on his journey. Set in the fictional world of Middle-earth, The Hobbit chronicles the quest of Bilbo Baggins, a hobbit who is swept into an epic adventure to reclaim the lost kingdom of Erebor from the dragon Smaug. Along the way, Bilbo encounters dwarves, elves, wizards, and other fantastical creatures, embarking on a journey of self-discovery and heroism.",
+    "totalPages": 310,
+    "rating": 4.8,
+    "category": "Fantasy",
+    "tags": ["Adventure", "Quest"],
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1937
+  }
+]

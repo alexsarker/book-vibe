@@ -1,0 +1,18 @@
+.fonter {
+  font-family: "Playfair Display", serif;
+}
+.mainText {
+  color: #ed0066;
+}
+.mainBg {
+  background-color: #ed0066;
+}
+.secText {
+  color: #5c33cf;
+}
+.secBg {
+  background-color: #5c33cf;
+}
+.pText {
+  color: #131313cc;
+}
