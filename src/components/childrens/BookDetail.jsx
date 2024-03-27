@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { saveBookStore } from "./localstorage";
+import { saveBookStore2 } from "./localstorage2";
 
 const BookDetail = () => {
   const books = useLoaderData();
@@ -26,6 +27,7 @@ const BookDetail = () => {
     } else {
       const newBooks = [...clickBook, book];
       setClickBook(newBooks);
+      saveBookStore2(idInt);
       toast.success("Added in Wishlist");
     }
   };

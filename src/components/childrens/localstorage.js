@@ -1,5 +1,5 @@
 const getStoredBooks = () => {
-  const storedBookStore = localStorage.getItem("book-store");
+  const storedBookStore = localStorage.getItem("read");
   if (storedBookStore) {
     return JSON.parse(storedBookStore);
   }
@@ -11,7 +11,7 @@ const saveBookStore = (id) => {
   const exists = storedBookies.find((bookId) => bookId === id);
   if (!exists) {
     storedBookies.push(id);
-    localStorage.setItem("book-store", JSON.stringify(storedBookies));
+    localStorage.setItem("read", JSON.stringify(storedBookies));
   }
 };
 
