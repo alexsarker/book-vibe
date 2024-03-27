@@ -1,17 +1,28 @@
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
-
+import { getStoredBooks } from "./localstorage";
+import { useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const PagesToRead = () => {
-  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+  const books = useLoaderData();
+  const [storedBooks, setStoredBooks] = useState([]);
 
-  const data = [
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-  ];
+  useEffect(() => {
+    const storedBookIds = getStoredBooks();
+    if (books.length > 0) {
+      const booksStored = books.filter((book) =>
+        storedBookIds.includes(book.bookId)
+      );
+      setStoredBooks(booksStored);
+    }
+  }, []);
+
+  const stored = storedBooks.map(book => ({
+    bookName: book.bookName,
+    totalPages: String(book.totalPages)
+  }));
+
+  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${
@@ -29,33 +40,36 @@ const PagesToRead = () => {
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
+
   return (
-    <div className="flex justify-center mt-16">
-      <BarChart
-        width={1600}
-        height={600}
-        data={data}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Bar
-          dataKey="uv"
-          fill="#8884d8"
-          shape={<TriangleBar />}
-          label={{ position: "top" }}
+    <div>
+      <div className="flex justify-center mt-16">
+        <BarChart
+          width={1600}
+          height={600}
+          data={stored}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
         >
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-          ))}
-        </Bar>
-      </BarChart>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="bookName" />
+          <YAxis domain={[0, 500]} />
+          <Bar
+            dataKey="totalPages"
+            fill="#8884d8"
+            shape={<TriangleBar />}
+            label={{ position: "top" }}
+          >
+            {stored.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+            ))}
+          </Bar>
+        </BarChart>
+      </div>
     </div>
   );
 };

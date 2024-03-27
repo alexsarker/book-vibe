@@ -61,12 +61,12 @@ const ListedBooks = () => {
           value={sortBy}
           onChange={handleSortChange}
         >
-          <option disabled value="">
+          <option disabled value="" className="bg-[#F3F3F3] text-black">
             Sort by
           </option>
-          <option>Rating</option>
-          <option>Number of pages</option>
-          <option>Published year</option>
+          <option className="bg-[#F3F3F3] text-black">Rating</option>
+          <option className="bg-[#F3F3F3] text-black">Number of pages</option>
+          <option className="bg-[#F3F3F3] text-black">Published year</option>
         </select>
       </div>
       <div>
@@ -218,5 +218,4 @@ const ListedBooks = () => {
     </div>
   );
 };
-
 export default ListedBooks;
