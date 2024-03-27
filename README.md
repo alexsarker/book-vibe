@@ -1,8 +1,17 @@
-# React + Vite
+# Book Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description: Book Vibe is a user-friendly digital platform that provides a diverse variety of books. Users may simply browse and discover new titles thanks to interactive features and customizable chart displays. The website has fluid navigation and responsive design, ensuring a pleasurable user experience on any device.
 
-Currently, two official plugins are available:
+Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Dynamic Data Rendering: Fetches and displays book data dynamically.
+
+2. Interactive Sorting: Allows sorting books based on different criteria.
+
+3. Tabbed Navigation: Uses tabs for easy navigation between book categories.
+
+4. Customized Chart Visualization: Utilizes Recharts for unique chart display.
+  
+5. Book Request: Request for new books in the form section.
+
+6. Responsive Design: Ensures optimal viewing across devices with flexible layout.
