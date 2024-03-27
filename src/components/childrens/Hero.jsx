@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../Root.css";
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
           <h1 className="fonter text-5xl font-bold pb-12">
             Books to freshen up your bookshelf
           </h1>
-          <button className="btn mainBg text-white">View The List</button>
+          <Link to="/listedbooks"><button className="btn mainBg text-white">View The List</button></Link>
         </div>
       </div>
     </div>
