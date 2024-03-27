@@ -43,7 +43,7 @@ const PagesToRead = () => {
 
   return (
     <div>
-      <div className="flex justify-center mt-16">
+      <div className="flex flex-col lg:flex-row justify-center mt-16">
         <BarChart
           width={1600}
           height={600}

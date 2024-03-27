@@ -69,150 +69,148 @@ const ListedBooks = () => {
           <option className="bg-[#F3F3F3] text-black">Published year</option>
         </select>
       </div>
-      <div>
-        <div role="tablist" className="tabs tabs-lifted">
-          <input
-            type="radio"
-            name="my_tabs_2"
-            role="tab"
-            className="tab"
-            aria-label="Read Books"
-            checked
-          />
-          <div
-            role="tabpanel"
-            className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-          >
-            {storedBooks.map((book) => (
-              <div
-                key={book.id}
-                className="p-6 border border-[#1313130D] rounded-2xl flex flex-col lg:flex-row items-center gap-12 mb-6"
-              >
-                <div className="flex-shrink-0 w-1/3">
-                  <img
-                    src={book.image}
-                    alt=""
-                    className="object-cover w-full h-full rounded-lg"
-                  />
+      <div role="tablist" className="tabs tabs-lifted">
+        <input
+          type="radio"
+          name="my_tabs_2"
+          role="tab"
+          className="tab"
+          aria-label="Readlist"
+          checked
+        />
+        <div
+          role="tabpanel"
+          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+        >
+          {storedBooks.map((book) => (
+            <div
+              key={book.id}
+              className="p-4 border border-[#1313130D] rounded-2xl flex flex-col lg:flex-row items-center gap-12 mb-6"
+            >
+              <div className="flex-shrink-0 lg:w-1/3">
+                <img
+                  src={book.image}
+                  alt=""
+                  className="object-cover w-full h-full rounded-lg"
+                />
+              </div>
+              <div className="flex flex-col gap-4">
+                <h2 className="fonter text-2xl font-bold">{book.bookName}</h2>
+                <p className="pText font-medium">By: {book.author}</p>
+                <div className="flex gap-3 items-center">
+                  <p className="font-bold">Tags : </p>
+                  {book?.tags.map((tag, idx) => (
+                    <div key={idx}>
+                      <p className="mainText font-medium px-4 py-2 bg-[#ED00661F] rounded-full">
+                        {tag}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex flex-col gap-4">
-                  <h2 className="fonter text-2xl font-bold">{book.bookName}</h2>
-                  <p className="pText font-medium">By: {book.author}</p>
-                  <div className="flex gap-3 items-center">
-                    <p className="font-bold">Tags : </p>
-                    {book?.tags.map((tag, idx) => (
-                      <div key={idx}>
-                        <p className="mainText font-medium px-4 py-2 bg-[#ED00661F] rounded-full">
-                          {tag}
-                        </p>
-                      </div>
-                    ))}
+                <div className="flex gap-2 items-center">
+                  <FiMapPin />
+                  <p className="pText">
+                    Year of Publishing: {book.yearOfPublishing}
+                  </p>
+                </div>
+                <div className="flex  gap-4">
+                  <div className="pText flex gap-2 items-center">
+                    <LiaUserFriendsSolid />
+                    <p>Publisher: {book.publisher}</p>
                   </div>
-                  <div className="flex gap-2 items-center">
-                    <FiMapPin />
-                    <p className="pText">
-                      Year of Publishing: {book.yearOfPublishing}
-                    </p>
+                  <div className="pText flex gap-2 items-center">
+                    <IoDocumentTextOutline />
+                    <p>Page {book.totalPages}</p>
                   </div>
-                  <div className="flex  gap-4">
-                    <div className="pText flex gap-2 items-center">
-                      <LiaUserFriendsSolid />
-                      <p>Publisher: {book.publisher}</p>
-                    </div>
-                    <div className="pText flex gap-2 items-center">
-                      <IoDocumentTextOutline />
-                      <p>Page {book.totalPages}</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="flex gap-4 items-center">
-                    <p className="text-[#328EFF] bg-[#328EFF26] py-2 px-5 rounded-lg">
-                      Category: {book.category}
-                    </p>
-                    <p className="text-[#FFAC33] bg-[#FFAC3326] py-2 px-5 rounded-lg">
-                      Rating: {book.rating}
-                    </p>
-                    <Link to={`/book/${book.bookId}`}>
-                      <button className="btn mainBg text-white">
-                        View Details
-                      </button>
-                    </Link>
-                  </div>
+                </div>
+                <hr />
+                <div className="flex gap-4 items-center">
+                  <p className="text-[#328EFF] bg-[#328EFF26] py-2 px-5 rounded-lg">
+                    Category: {book.category}
+                  </p>
+                  <p className="text-[#FFAC33] bg-[#FFAC3326] py-2 px-5 rounded-lg">
+                    Rating: {book.rating}
+                  </p>
+                  <Link to={`/book/${book.bookId}`}>
+                    <button className="btn mainBg text-white">
+                      View Details
+                    </button>
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
 
-          <input
-            type="radio"
-            name="my_tabs_2"
-            role="tab"
-            className="tab"
-            aria-label="Wishlist Books"
-          />
-          <div
-            role="tabpanel"
-            className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-          >
-            {storedBooks2.map((book) => (
-              <div
-                key={book.id}
-                className="p-6 border border-[#1313130D] rounded-2xl flex flex-col lg:flex-row items-center gap-12 mb-6"
-              >
-                <div className="flex-shrink-0 w-1/3">
-                  <img
-                    src={book.image}
-                    alt=""
-                    className="object-cover w-full h-full rounded-lg"
-                  />
+        <input
+          type="radio"
+          name="my_tabs_2"
+          role="tab"
+          className="tab"
+          aria-label="Wishlist"
+        />
+        <div
+          role="tabpanel"
+          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+        >
+          {storedBooks2.map((book) => (
+            <div
+              key={book.id}
+              className="p-4 border border-[#1313130D] rounded-2xl flex flex-col lg:flex-row items-center gap-12 mb-6"
+            >
+              <div className="flex-shrink-0 lg:w-1/3">
+                <img
+                  src={book.image}
+                  alt=""
+                  className="object-cover w-full h-full rounded-lg"
+                />
+              </div>
+              <div className="flex flex-col gap-4">
+                <h2 className="fonter text-2xl font-bold">{book.bookName}</h2>
+                <p className="pText font-medium">By: {book.author}</p>
+                <div className="flex gap-3 items-center">
+                  <p className="font-bold">Tags : </p>
+                  {book?.tags.map((tag, idx) => (
+                    <div key={idx}>
+                      <p className="mainText font-medium px-4 py-2 bg-[#ED00661F] rounded-full">
+                        {tag}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex flex-col gap-4">
-                  <h2 className="fonter text-2xl font-bold">{book.bookName}</h2>
-                  <p className="pText font-medium">By: {book.author}</p>
-                  <div className="flex gap-3 items-center">
-                    <p className="font-bold">Tags : </p>
-                    {book?.tags.map((tag, idx) => (
-                      <div key={idx}>
-                        <p className="mainText font-medium px-4 py-2 bg-[#ED00661F] rounded-full">
-                          {tag}
-                        </p>
-                      </div>
-                    ))}
+                <div className="flex gap-2 items-center">
+                  <FiMapPin />
+                  <p className="pText">
+                    Year of Publishing: {book.yearOfPublishing}
+                  </p>
+                </div>
+                <div className="flex  gap-4">
+                  <div className="pText flex gap-2 items-center">
+                    <LiaUserFriendsSolid />
+                    <p>Publisher: {book.publisher}</p>
                   </div>
-                  <div className="flex gap-2 items-center">
-                    <FiMapPin />
-                    <p className="pText">
-                      Year of Publishing: {book.yearOfPublishing}
-                    </p>
+                  <div className="pText flex gap-2 items-center">
+                    <IoDocumentTextOutline />
+                    <p>Page {book.totalPages}</p>
                   </div>
-                  <div className="flex  gap-4">
-                    <div className="pText flex gap-2 items-center">
-                      <LiaUserFriendsSolid />
-                      <p>Publisher: {book.publisher}</p>
-                    </div>
-                    <div className="pText flex gap-2 items-center">
-                      <IoDocumentTextOutline />
-                      <p>Page {book.totalPages}</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="flex gap-4 items-center">
-                    <p className="text-[#328EFF] bg-[#328EFF26] py-2 px-5 rounded-lg">
-                      Category: {book.category}
-                    </p>
-                    <p className="text-[#FFAC33] bg-[#FFAC3326] py-2 px-5 rounded-lg">
-                      Rating: {book.rating}
-                    </p>
-                    <Link to={`/book/${book.bookId}`}>
-                      <button className="btn mainBg text-white">
-                        View Details
-                      </button>
-                    </Link>
-                  </div>
+                </div>
+                <hr />
+                <div className="flex gap-4 items-center">
+                  <p className="text-[#328EFF] bg-[#328EFF26] py-2 px-5 rounded-lg">
+                    Category: {book.category}
+                  </p>
+                  <p className="text-[#FFAC33] bg-[#FFAC3326] py-2 px-5 rounded-lg">
+                    Rating: {book.rating}
+                  </p>
+                  <Link to={`/book/${book.bookId}`}>
+                    <button className="btn mainBg text-white">
+                      View Details
+                    </button>
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

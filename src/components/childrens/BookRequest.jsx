@@ -43,7 +43,7 @@ const BookRequest = () => {
       <h2 className="text-3xl font-bold text-center bg-[#1313130D] py-8 my-8">
         Book Request
       </h2>
-      <div className="flex justify-center gap-10">
+      <div className="flex flex-col lg:flex-row lg:justify-center gap-10 items-center lg:items-start mb-10 lg:mb-0">
         <div className="w-96">
           <form
             onSubmit={handleSubmit}

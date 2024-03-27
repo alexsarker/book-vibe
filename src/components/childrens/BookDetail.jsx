@@ -33,10 +33,10 @@ const BookDetail = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 p-10 lg:p-0">
       <div className="relative">
         <img
-          className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+          className="lg:absolute inset-0 w-full h-full object-cover rounded-2xl"
           src={book?.image}
           alt="Book Cover"
         />
