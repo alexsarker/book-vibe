@@ -1,6 +1,6 @@
 # Book Vibe
 
-description: Book Vibe is a user-friendly digital platform that provides a diverse variety of books. Users may simply browse and discover new titles thanks to interactive features and customizable chart displays. The website has fluid navigation and responsive design, ensuring a pleasurable user experience on any device.
+Description: Book Vibe is a user-friendly digital platform that provides a diverse variety of books. Users may simply browse and discover new titles thanks to interactive features and customizable chart displays. The website has fluid navigation and responsive design, ensuring a pleasurable user experience on any device.
 
 Features:
 1.Dynamic Data Rendering: Fetches and displays book data dynamically.
