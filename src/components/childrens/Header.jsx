@@ -12,6 +12,9 @@ const Header = () => {
       <li>
         <NavLink to="/pagestoread">Pages to Read</NavLink>
       </li>
+      <li>
+        <NavLink to="/bookrequest">Book Request</NavLink>
+      </li>
     </>
   );
   return (

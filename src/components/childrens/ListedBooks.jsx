@@ -86,7 +86,7 @@ const ListedBooks = () => {
             {storedBooks.map((book) => (
               <div
                 key={book.id}
-                className="p-6 border border-[#1313130D] rounded-2xl flex items-center gap-12 mb-6"
+                className="p-6 border border-[#1313130D] rounded-2xl flex flex-col lg:flex-row items-center gap-12 mb-6"
               >
                 <div className="flex-shrink-0 w-1/3">
                   <img
@@ -157,7 +157,7 @@ const ListedBooks = () => {
             {storedBooks2.map((book) => (
               <div
                 key={book.id}
-                className="p-6 border border-[#1313130D] rounded-2xl flex items-center gap-12 mb-6"
+                className="p-6 border border-[#1313130D] rounded-2xl flex flex-col lg:flex-row items-center gap-12 mb-6"
               >
                 <div className="flex-shrink-0 w-1/3">
                   <img

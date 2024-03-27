@@ -11,7 +11,7 @@ const Books = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mb-12">
       <h2 className="fonter text-4xl font-bold text-center mb-9">Books</h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 place-items-center">
         {books.map((book) => (
