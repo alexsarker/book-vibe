@@ -19,7 +19,7 @@ const BookDetail = () => {
     saveBookStore(idInt);
     toast.success("Added in Read List");
   };
-     
+
   const handleList = () => {
     const isExist = clickBook.find((clicked) => clicked.bookId === book.bookId);
     if (isExist) {

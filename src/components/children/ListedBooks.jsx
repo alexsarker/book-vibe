@@ -11,37 +11,29 @@ const ListedBooks = () => {
   const [storedBooks, setStoredBooks] = useState([]);
   const [storedBooks2, setStoredBooks2] = useState([]);
   const [sortBy, setSortBy] = useState("");
-
   useEffect(() => {
-    const storedBookIds = getStoredBooks();
-    const storedBookIds2 = getStoredBooks2();
     if (books.length > 0) {
+      const storedBookIds = getStoredBooks();
+      const storedBookIds2 = getStoredBooks2();
+
       const booksStored = books.filter((book) =>
         storedBookIds.includes(book.bookId)
       );
-
-      if (sortBy === "Rating") {
-        booksStored.sort((a, b) => b.rating - a.rating);
-      } else if (sortBy === "Number of pages") {
-        booksStored.sort((a, b) => a.totalPages - b.totalPages);
-      } else if (sortBy === "Published year") {
-        booksStored.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
-      }
-
-      setStoredBooks(booksStored);
-    }
-    if (books.length > 0) {
       const booksStored2 = books.filter((book) =>
         storedBookIds2.includes(book.bookId)
       );
 
       if (sortBy === "Rating") {
+        booksStored.sort((a, b) => b.rating - a.rating);
         booksStored2.sort((a, b) => b.rating - a.rating);
       } else if (sortBy === "Number of pages") {
+        booksStored.sort((a, b) => a.totalPages - b.totalPages);
         booksStored2.sort((a, b) => a.totalPages - b.totalPages);
       } else if (sortBy === "Published year") {
+        booksStored.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
         booksStored2.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
       }
+      setStoredBooks(booksStored);
       setStoredBooks2(booksStored2);
     }
   }, [books, sortBy]);
@@ -76,15 +68,15 @@ const ListedBooks = () => {
           role="tab"
           className="tab"
           aria-label="Readlist"
-          checked
+          defaultChecked
         />
         <div
           role="tabpanel"
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
-          {storedBooks.map((book) => (
+          {storedBooks.map((book, idx) => (
             <div
-              key={book.id}
+              key={idx}
               className="p-4 border border-[#1313130D] rounded-2xl flex flex-col lg:flex-row items-center gap-12 mb-6"
             >
               <div className="flex-shrink-0 lg:w-1/3">
@@ -153,9 +145,9 @@ const ListedBooks = () => {
           role="tabpanel"
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
-          {storedBooks2.map((book) => (
+          {storedBooks2.map((book, idx) => (
             <div
-              key={book.id}
+              key={idx}
               className="p-4 border border-[#1313130D] rounded-2xl flex flex-col lg:flex-row items-center gap-12 mb-6"
             >
               <div className="flex-shrink-0 lg:w-1/3">

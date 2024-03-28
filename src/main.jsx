@@ -4,11 +4,11 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./components/Root";
 import ErrorPage from "./components/ErrorPage";
-import Home from "./components/childrens/Home";
-import ListedBooks from "./components/childrens/ListedBooks";
-import PagesToRead from "./components/childrens/PagesToRead";
-import BookDetail from "./components/childrens/BookDetail";
-import BookRequest from "./components/childrens/BookRequest";
+import Home from "./components/children/Home";
+import ListedBooks from "./components/children/ListedBooks";
+import PagesToRead from "./components/children/PagesToRead";
+import BookDetail from "./components/children/BookDetail";
+import BookRequest from "./components/children/BookRequest";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/listedbooks",
         element: <ListedBooks></ListedBooks>,
-        loader: () => fetch("data.json")
+        loader: () => fetch("data.json"),
       },
       {
         path: "/pagestoread",
